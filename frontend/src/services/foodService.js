@@ -16,3 +16,8 @@ export const getAllByTag = async (tag) => {
 
     return allFoods.filter(item => item.tags?.includes(tag));
 };
+
+export const getById = async foodId =>
+    {
+        return sample_foods.find(item => item.id === foodId);
+    };

@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import CartProvider from './hooks/useCart';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,8 +12,9 @@ root.render(
     <BrowserRouter>
       {/* <LoadingProvider> */}
         {/* <AuthProvider> */}
-          {/* <CartProvider> */}
+          <CartProvider>
             <App />
+            </CartProvider>
             {/* <ToastContainer
               position="bottom-right"
               autoClose={5000}
@@ -25,7 +27,7 @@ root.render(
               pauseOnHover
               theme="light"
             />
-          </CartProvider>
+          
         </AuthProvider>
       </LoadingProvider> */}
     </BrowserRouter>
